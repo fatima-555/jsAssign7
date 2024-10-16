@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1 -->
+    <a href="#" onclick="showAlert()">Click me!</a>
+
+    <!-- 2 -->
+    <h2>Mobile Images</h2>
+
+<img src="https://via.placeholder.com/100x200?text=Mobile1" alt="Mobile 1" onclick="showAlert('Mobile 1')" />
+<img src="https://via.placeholder.com/100x200?text=Mobile2" alt="Mobile 2" onclick="showAlert('Mobile 2')" />
+<img src="https://via.placeholder.com/100x200?text=Mobile3" alt="Mobile 3" onclick="showAlert('Mobile 3')" />
+    
+    <!-- 3 -->
+    <h2>Student Records</h2>
+
+    <table id="studentTable">
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>John</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Mark</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+            <tr>
+                <td>Anna</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 4 -->
+    <h2>Hover over the image to change it</h2>
+
+<img id="myImage" src="https://via.placeholder.com/300x200?text=Image1" alt="Image" 
+    onmouseover="changeImage()" onmouseout="resetImage()" /> 
+
+    <!-- 5 -->
+    <h2>Counter</h2>
+
+<p id="counterValue">0</p>
+<button onclick="increaseCounter()">Increase</button>
+<button onclick="decreaseCounter()">Decrease</button> 
+
+    <script src="app.js"></script>
+</body>
+</html>
